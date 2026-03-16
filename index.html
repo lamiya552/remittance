@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Rate Calculator</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #f4f4f9; }
+        .container { background: white; padding: 30px; border-radius: 15px; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+        .result { font-size: 2.5rem; color: #2ecc71; font-weight: bold; margin: 20px 0; }
+        .details { color: #666; font-size: 0.9rem; }
+        .loading { color: #f39c12; }
+    </style>
 </head>
 <body>
 
     <div class="container">
         <h1>Calculation Result</h1>
         <div id="display-area">
-            <p class="loading">Fetching live data from tefst</p>
+            <p class="loading">Fetching live data from NBLMT...</p>
         </div>
         <hr>
-        <p class="details"></p>
+        <p class="details">Formula: (1,000 × Rate% × 102.5 - 10 × 31.7) / 1,000</p>
     </div>
 
     <script>
